@@ -38,7 +38,7 @@ jobs:
       stored_code: ${{ steps.check.outputs.stored_code }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Check activation status
         id: check
@@ -73,7 +73,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Fetch and validate activation code
         id: validate
@@ -193,7 +193,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Update README with payment info
         run: |
@@ -292,7 +292,7 @@ jobs:
           echo "✅ لینک دانلود دریافت شد"
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
